@@ -1,13 +1,19 @@
-import jwt from "jsonwebtoken";
+import jwt, { Secret, SignOptions } from "jsonwebtoken";
 
-const JWT_SECRET = process.env.JWT_SECRET;
-if (!JWT_SECRET) throw new Error("JWT_SECRET not set");
+const JWT_SECRET: Secret =
+  process.env.JWT_SECRET ||
+  (() => {
+    throw new Error("JWT_SECRET not set");
+  })();
 
-export function signToken(payload: string | Buffer | object, expiresIn = "7d") {
-  // JWT_SECRET! is safe here because of the runtime check above
-  return jwt.sign(payload, JWT_SECRET!, { expiresIn });
+export function signToken(
+  payload: string | Buffer | object,
+  expiresIn: SignOptions["expiresIn"] = "7d"
+): string {
+  const options: SignOptions = { expiresIn };
+  return jwt.sign(payload, JWT_SECRET, options);
 }
 
-export function verifyToken(token: string) {
-  return jwt.verify(token, JWT_SECRET!);
+export function verifyToken<T = any>(token: string): T {
+  return jwt.verify(token, JWT_SECRET) as T;
 }
