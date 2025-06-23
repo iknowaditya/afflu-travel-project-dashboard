@@ -35,8 +35,8 @@ This project demonstrates best practices for authentication, protected routes, a
 
 ### 1. Clone the repository
 
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone [https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME](https://github.com/iknowaditya/afflu-travel-project-dashboard.git)
 
 
 ### 2. Install dependencies
