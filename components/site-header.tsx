@@ -3,10 +3,8 @@
 import * as React from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { ModeToggle } from "./ui/ModeToggle";
-import { Icons } from "@/components/icons";
 import { Menu, Github } from "lucide-react";
 
 export function SiteHeader() {

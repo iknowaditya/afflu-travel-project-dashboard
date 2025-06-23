@@ -47,7 +47,7 @@ export default function CreateUserForm() {
         const errorData = await response.json();
         setError(errorData.error || "Failed to create user");
       }
-    } catch (err) {
+    } catch {
       setError("An unexpected error occurred");
     } finally {
       setLoading(false);

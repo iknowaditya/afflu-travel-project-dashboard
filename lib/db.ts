@@ -5,7 +5,7 @@ const MONGODB_URI = process.env.DATABASE_URL as string;
 if (!MONGODB_URI)
   throw new Error("Please define the DATABASE_URL environment variable");
 
-let cached = (global as any).mongoose || { conn: null, promise: null };
+const cached = (global as any).mongoose || { conn: null, promise: null };
 
 export async function dbConnect() {
   if (cached.conn) return cached.conn;

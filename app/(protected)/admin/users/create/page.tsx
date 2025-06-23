@@ -23,7 +23,7 @@ export default function CreateUserPage() {
           <CardHeader>
             <CardTitle>Access Denied</CardTitle>
             <CardDescription>
-              You don't have permission to view this page
+              You don&apos;t have permission to view this page
             </CardDescription>
           </CardHeader>
           <CardContent>

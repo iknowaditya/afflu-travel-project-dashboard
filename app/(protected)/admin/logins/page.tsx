@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useAuth } from "@/context/AuthContext";
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -39,8 +40,6 @@ import {
   Pagination,
   PaginationContent,
   PaginationItem,
-  PaginationPrevious,
-  PaginationNext,
   PaginationLink,
 } from "@/components/ui/pagination";
 
@@ -142,7 +141,7 @@ export default function AdminLoginsPage() {
           <CardHeader>
             <CardTitle>Access Denied</CardTitle>
             <CardDescription>
-              You don't have permission to view this page.
+              You don&apos;t have permission to view this page.
             </CardDescription>
           </CardHeader>
         </Card>
@@ -212,10 +211,12 @@ export default function AdminLoginsPage() {
                           <TableCell className="font-medium">
                             <div className="flex items-center gap-3">
                               {log.avatar ? (
-                                <img
+                                <Image
                                   src={log.avatar}
                                   alt={log.user}
                                   className="h-8 w-8 rounded-full"
+                                  width={32}
+                                  height={32}
                                 />
                               ) : (
                                 <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">

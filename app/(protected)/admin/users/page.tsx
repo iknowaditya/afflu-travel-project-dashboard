@@ -46,7 +46,7 @@ export default function AdminUsersPage() {
           <CardHeader>
             <CardTitle>Access Denied</CardTitle>
             <CardDescription>
-              You don't have permission to view this page
+              You don&apos;t have permission to view this page
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -81,7 +81,7 @@ export default function AdminUsersPage() {
             <div>
               <CardTitle>All Users</CardTitle>
               <CardDescription>
-                Manage your system's user accounts
+                Manage your system&apos;s user accounts
               </CardDescription>
             </div>
             <div className="flex items-center space-x-2">

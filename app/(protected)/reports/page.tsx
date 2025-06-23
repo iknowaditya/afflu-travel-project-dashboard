@@ -49,7 +49,7 @@ export default function HelpPage() {
           </div>
           <CardTitle className="text-2xl">Help & Support</CardTitle>
           <CardDescription>
-            We're here to help you with any questions or issues
+            We&apos;re here to help you with any questions or issues
           </CardDescription>
         </CardHeader>
         <CardContent>

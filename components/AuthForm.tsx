@@ -71,7 +71,7 @@ const AuthForm = ({ mode }: Props) => {
         if (!ok) setError("Registration failed");
         else router.push("/login");
       }
-    } catch (err) {
+    } catch {
       setError("An unexpected error occurred");
     } finally {
       setIsLoading(false);
@@ -170,7 +170,7 @@ const AuthForm = ({ mode }: Props) => {
         <p className="text-center text-sm text-muted-foreground">
           {mode === "login" ? (
             <>
-              Don't have an account?{" "}
+              Don&apos;t have an account?{" "}
               <Button
                 variant="link"
                 className="h-auto p-0 text-sm"

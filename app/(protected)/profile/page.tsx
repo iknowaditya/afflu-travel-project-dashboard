@@ -15,7 +15,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
 // Lucide icons
-import { Loader2, Settings, History, Pencil } from "lucide-react";
+import { Loader2, Settings, History } from "lucide-react";
 
 export default function ProfilePage() {
   const { user, loading } = useAuth();
