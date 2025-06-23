@@ -50,7 +50,6 @@ Create a `.env.local` file in the root directory and add:
 
 DATABASE_URL=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-IP_INFO_TOKEN=your_ipinfo_token
 NEXT_PUBLIC_BASE_URL=http://localhost:3000
 
 
@@ -70,7 +69,26 @@ NEXT_PUBLIC_BASE_URL=http://localhost:3000
 - User info is extracted from JWT in API routes/pages as needed.
 - Logout route clears the JWT cookie.
 
----
+## 🔑 How to Test Login & Registration
+
+- **Registration:**  
+  Navigate to the registration page (`/register`) and fill in the required details to create a new account.  
+  Upon successful registration, you will receive a JWT stored in an httpOnly cookie.
+
+- **Login:**  
+  Go to the login page (`/login`) and enter your credentials.  
+  Sample test accounts you can use:  
+  - User: `test@gmail.com`  
+  - Admin: `test5@gmail.com`  
+  - Password for both: `111111`
+
+- **Protected Routes:**  
+  After login, you can access protected routes such as `/dashboard` or `/profile`.  
+  If you try to access these without a valid token, you will be redirected to the login page.
+
+- **Logout:**  
+  Use the logout button or endpoint to clear the JWT cookie and end your session.
+
 
 ## 🧪 Linting & Formatting
 
